@@ -55,7 +55,7 @@ inline void writeChar(int x) {
 }
 
 template<typename T>
-inline T writeInt() {
+inline void writeInt(T x, char end) {
     char s[24];
     int n = 0;
     if (x < 0)
