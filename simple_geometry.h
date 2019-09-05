@@ -66,7 +66,7 @@ inline bool intersect_segments(const Point& p1, const Point& p2, const Point& q1
     Line l1(p1, p2), l2(q1, q2);
     if (l1 || l2) return false;
     x = l1 ^ l2;
-    return on_segment(p1, p2, x, false);
+    return on_segment(p1, p2, x, false) && on_segment(q1, q2, x, false);
 }
 
 // in case circles are not equal
